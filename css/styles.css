@@ -1,0 +1,188 @@
+:root{
+    --fondo: #1f1f1f;
+    --fondoSecundario: #2e2e2e;
+    --texto: #ebebeb;
+    --hover: #e60e0e;
+}
+.blue-mode{
+    --fondo: #ededed;
+    --fondoSecundario: #dcdcdc;
+    --texto: #0a0a0a;
+    --hover: #59008d;
+}
+
+/* Reinicio */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+*::before, *::after{ box-sizing: border-box; }
+
+/* Genereal */
+body{
+    font-family: "Poppins", system-ui;
+    background-color:var(--fondo) ;
+    color: var(--texto);
+}
+a{color: var(--texto);}
+span{
+    color: var(--hover);
+    text-shadow: 0 0 .1rem var(--hover);
+}
+.blanco {
+    color: var(--texto);
+}
+/* Estilos Barra Navegacion */
+.navegacion{
+    background-color:var(--fondoSecundario);
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 100;
+}
+.logo ion-icon{
+    font-size: 1.2rem;
+ }
+.logo{
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.logo .horizontal{
+    transform: scaleX(-1);
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+.opcionesAside a{
+    /* Cambiar a .5 */
+    margin: 0 .2rem;
+    transition: all 0.5s ease;
+}
+.opcionesAside a:hover{
+    color: var(--hover);
+    text-shadow: 0 0 .4rem var(--hover);
+}
+
+.cuello{
+    width: 100%;
+    height: 4rem;
+}
+
+main{
+    padding: .6rem .5rem;
+}
+.sobreMi{
+    padding: 1rem .7rem;
+    display: flex;
+}
+.sobreMi img{
+    height: 16rem;
+    width: 13rem;
+    border-radius: 20rem;
+    transition: all .3s ease;
+    box-shadow: 0 0 .7rem .1rem var(--hover);
+}
+.sobreMi img:hover{
+    box-shadow: 0 0 1rem .5rem var(--hover);
+}
+.parrafos{
+    padding: 0 .6rem;
+    margin-left: 1rem;  
+}
+.parrafos p{
+    margin-top: 1rem;
+}
+.parrafos h2 span.typewriter{
+    text-shadow: 0 0 .2rem var(--hover);
+}
+.parrafos div.iconos{
+    padding: .6rem 0;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: end;
+}
+.parrafos div.iconos ion-icon{
+    font-size: 2rem;
+    margin: 1rem .9rem 0 0;
+    transition: all .5s ease;
+}
+.parrafos div.iconos ion-icon:hover{
+    color: var(--hover);
+    filter: drop-shadow(0 0 .3rem var(--hover));
+}
+
+/* Seccion de habilidades */
+.habilidades{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.blandas ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    transition: all .5s ease;
+}
+@media (max-width:640px) {
+    .blandas ul{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+}
+.blandas ul li{
+    background-color: var(--fondoSecundario);
+    border-radius: 1rem;
+    min-width: 10rem;
+    height: auto;
+    padding: .5rem;
+    margin: .6rem;
+    transition: all .5s ease;
+}
+.blandas ul li:hover{
+    transform: scale(1.2);
+    margin: 0 2.2rem;
+}
+
+.blandas ul li ion-icon{
+    font-size: 1.4rem;
+}
+.blandas ul li p{
+    margin-top: 1rem;
+}
+/* Seccion Tecnologias */
+.tecnologias{
+    margin: 1.7rem 0;
+}
+.tecnologias ion-icon, 
+.tecnologias i{
+    font-size: 3rem;
+}
+.tecnologias div.dos,
+.tecnologias div.more{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+.tecnologias h3{
+    margin: .5rem 0;
+}
+.tecnologias ul li{
+    padding: 1rem;
+    width: 20rem;
+    height: auto;
+    transition: all .5s ease;
+}
+.tecnologias ul li:hover{
+    background-color: var(--fondoSecundario);
+    border-radius: 2rem;
+    transform: scale(1.2);
+}
