@@ -78,6 +78,7 @@ span{
 main{
     padding: .6rem .5rem;
 }
+/* Ver la manera de implementar GRID */
 .sobreMi{
     padding: 1rem .7rem;
     display: flex;
@@ -185,4 +186,71 @@ main{
     background-color: var(--fondoSecundario);
     border-radius: 2rem;
     transform: scale(1.2);
+}
+
+/* Contactame */
+.formulario{
+    background-color: var(--fondoSecundario);
+    padding: 1rem;
+}
+.formulario fieldset{
+    /* background: rgba(255, 255, 255, 0.2); Fondo semi-transparente
+    backdrop-filter: blur(10px); Aplicar desenfoque
+    border-radius: 1rem; */
+    border: none;
+}
+.formulario .contactame{
+    width: min(50rem, 100%);
+    margin: 0 auto;
+    padding: .7rem;
+}
+.formulario .contactame legend{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+} 
+/* .formulario .contactame .campos{
+    margin: .5rem 0;
+} */
+.formulario .contactame .campo{
+    margin: .5rem 0;
+}
+.formulario .contactame .campo label{
+    display: block;
+    margin: .5rem 0;
+    font-weight: bold;
+}
+.formulario .contactame .campo .input-t{
+    padding: .4rem;
+    width: 100%;
+    border: none;
+    border-radius: .3rem;
+}
+.boton{
+    padding: .5rem;
+    color: var(--texto);
+    background-color: #0f0f0f;
+    border: none;
+    border-radius: .3rem;
+    font-weight: bold;
+    transition: all .5s ease;
+    text-align: center;
+    width: 100%;
+
+}
+.boton:hover{
+    cursor: pointer;
+    background-color: var(--hover);
+    box-shadow: 0 0 .7rem .1rem var(--hover);
+}
+.derecha{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width:640px) {
+    .boton{
+        width: auto;
+        padding: .6rem;
+    }
 }

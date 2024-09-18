@@ -143,26 +143,31 @@
     </main>
 
     <!-- Formulacion -->
-    <section>
-        <form action="">
+    <section class="formulario">
+        <form action="" class="contactame">    
             <fieldset>
                 <legend>Contactame</legend>
 
-                <div>
-                    <label for="">Nombre    </label>
-                    <input type="text" placeholder="Tu Nombre">
+                <div class="campos">
+                    <div class="campo">
+                        <label for="">Nombre    </label>
+                        <input class="input-t" type="text" placeholder="Tu Nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="">Telefono</label>
+                        <input class="input-t" type="number" placeholder="Tu Telefono">
+                    </div>
+                    <div class="campo">
+                        <label for="">Correo</label>
+                        <input class="input-t" type="email" placeholder="Tu Correo">
+                    </div>
+                    <div class="campo">
+                        <label for="">Mensaje</label>
+                        <textarea class="input-t" name="" id=""></textarea>
+                    </div>
                 </div>
-                <div>
-                    <label for="">Telefono</label>
-                    <input type="number" placeholder="Tu Telefono">
-                </div>
-                <div>
-                    <label for="">Correo</label>
-                    <input type="email" placeholder="Tu Correo">
-                </div>
-                <div>
-                    <label for="">Mensaje</label>
-                    <textarea name="" id=""></textarea>
+                <div class="derecha">
+                    <input class="boton" type="submit" value="Enviar">
                 </div>
             </fieldset>
         </form>
