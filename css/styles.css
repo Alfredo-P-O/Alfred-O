@@ -4,12 +4,6 @@
     --texto: #ebebeb;
     --hover: #e60e0e;
 }
-.blue-mode{
-    --fondo: #ededed;
-    --fondoSecundario: #dcdcdc;
-    --texto: #0a0a0a;
-    --hover: #59008d;
-}
 
 /* Reinicio */
 *{
@@ -22,14 +16,6 @@
 *::before, *::after{ box-sizing: border-box; }
 
 /* Genereal */
-html{
-    scroll-snap-type: y mandatory;
-}
-/* Scroll Snap */
-.navegacion, .habilidades, .formulario, footer{
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-}
 body{
     font-family: "Poppins", system-ui;
     background-color:var(--fondo) ;
@@ -40,9 +26,8 @@ span{
     color: var(--hover);
     text-shadow: 0 0 .1rem var(--hover);
 }
-.blanco {
-    color: var(--texto);
-}
+.blanco { color: var(--texto); }
+.texto_centrado { text-align: center; }
 
 /* Estilos Barra Navegacion */
 .navegacion{
@@ -84,29 +69,45 @@ span{
     height: 4rem;
 }
 
-main{
-    padding: .6rem .5rem;
-}
+main{ padding: 1rem; }
+section{ margin: 1rem 0; }
+
 /* Ver la manera de implementar GRID */
 .sobreMi{
-    padding: 1rem .7rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
 }
-.sobreMi img{
-    height: 16rem;
-    width: 13rem;
+.perfil{
+    padding: 1.4rem 1rem;
+} 
+.perfil img{
+    height: 13rem;
+    width: 11rem;
     border-radius: 20rem;
     transition: all .3s ease;
     box-shadow: 0 0 .7rem .1rem var(--hover);
 }
-.sobreMi img:hover{
+.perfil img:hover{
     box-shadow: 0 0 1rem .5rem var(--hover);
 }
+@media (min-width: 640px) {
+    .sobreMi{
+        flex-direction: row;
+    }
+    .perfil img{
+        height: 16rem;
+        width: 13rem;
+    }
+}  /* Fin mediaQuery   */
+
 .parrafos{
     padding: 0 .6rem;
     margin-left: 1rem;  
 }
 .parrafos p{
+    font-size: 1.4rem;
     margin-top: 1rem;
 }
 .parrafos h2 span.typewriter{
@@ -129,72 +130,53 @@ main{
 }
 
 /* Seccion de habilidades */
-.habilidades{
-    display: block;
-    width: 100%;
-    height: auto;
-    text-align: center;
-}
+
 .blandas ul{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-    transition: all .5s ease;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
 }
-@media (max-width:640px) {
-    .blandas ul{
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
+@media (min-width: 640px) {
+    .blandas ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: unset;
     }
 }
 .blandas ul li{
     background-color: var(--fondoSecundario);
     border-radius: 1rem;
-    min-width: 10rem;
-    height: auto;
+    font-size: 1.2rem;
     padding: .5rem;
     margin: .6rem;
-    transition: all .5s ease;
 }
-.blandas ul li:hover{
-    transform: scale(1.2);
-    margin: 0 2.2rem;
-}
-
 .blandas ul li ion-icon{
     font-size: 1.4rem;
 }
-.blandas ul li p{
-    margin-top: 1rem;
-}
+
 /* Seccion Tecnologias */
-.tecnologias{
-    margin: 1.7rem 0;
-}
 .tecnologias ion-icon, 
 .tecnologias i{
     font-size: 3rem;
 }
-.tecnologias div.dos,
-.tecnologias div.more{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 1rem;
+.tecnologias ul{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    margin: .7rem 0;
 }
-.tecnologias h3{
-    margin: .5rem 0;
+@media (min-width: 640px) {
+    .tecnologias ul{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+        align-items: center;
+    }    
 }
 .tecnologias ul li{
     padding: 1rem;
-    width: 20rem;
-    height: auto;
-    transition: all .5s ease;
 }
 .tecnologias ul li:hover{
     background-color: var(--fondoSecundario);
-    border-radius: 2rem;
-    transform: scale(1.2);
+    border-radius: 1rem;
 }
 
 /* Contactame */
@@ -265,7 +247,6 @@ main{
     display: flex;
     justify-content: flex-end;
 }
-
 @media (min-width:640px) {
     .boton{
         width: auto;
